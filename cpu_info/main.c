@@ -134,7 +134,7 @@ end:
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved)
 {
     int iset;
-    char buff[MAX_PATH] = "Data\\" HR_NAME "\\";
+    char buff[MAX_PATH] = HR_NAME "\\";
 
     if (fdwReason == DLL_PROCESS_ATTACH)
     {
@@ -156,7 +156,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved)
         else
         {
             printf("not found!\n\n");
-            HR_MSGBOX("No valid HR binary found in Data/" HR_NAME "!",
+            HR_MSGBOX("No valid HR binary found in " HR_NAME "!",
                       MB_ICONERROR);
         }
     }
